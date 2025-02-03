@@ -24,6 +24,8 @@ import smart_control from './smart_control.png'
 import conditioning from './conditioning.png'
 import ac_problems from './ac_problems.png'
 import centre from './centre.jpg'
+import tensed from './tensed.jpg'
+import ac_maintainece from './ac_maintainece.jpg'
 
 export const assets = {
     logo,
@@ -50,5 +52,7 @@ export const assets = {
     smart_control,
     conditioning,
     ac_problems,
-    centre
+    centre,
+    tensed,
+    ac_maintainece
 }
