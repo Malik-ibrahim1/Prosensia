@@ -1,6 +1,5 @@
 import { assets } from "../assets/assets"
 import FeatureCarousel from "./FeatureCarousel"
-import Footer from "./footer"
 
 const IconBuilding = () => (
   <svg
@@ -412,9 +411,6 @@ const HeroWithSmartCity = () => {
         <div className="w-24 h-0.5 bg-yellow-400 mb-8"></div>
         <FeatureCarousel />
       </div>
-
-      {/* Footer */}
-      <Footer/>
 
       {/* Gradient Animation CSS */}
       <style>
