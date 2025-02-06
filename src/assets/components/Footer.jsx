@@ -1,52 +1,39 @@
 import { Facebook, Instagram, MessageCircle } from "lucide-react"
 import { assets } from "../assets/assets"
+import { NavLink } from "react-router-dom"
 
 export default function Footer() {
   return (
-    <div className="relative z-20 bg-[#FFD700] py-16">
+    <footer className="bg-yellow-400 py-8">
       <div className="container mx-auto px-4">
-        {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            The future of
-            <br />
-            HVAC
-          </h2>
-          <div className="space-y-6">
-            <p className="text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Logo and Tagline */}
+          <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
+            <NavLink to="/">
+              <img src={assets.logo || "/placeholder.svg"} alt="Logo" className="h-24 w-auto" />
+            </NavLink>
+            <p className="mt-2 text-center font-bold md:text-left text-sm text-black max-w-xs">
+              We make HVAC systems <span className="text-green-700">green</span>, <span className="text-blue-800">sustainable</span> & <span className="text-orange-600">highly effective</span>
             </p>
-            <button className="px-8 py-3 bg-black text-white rounded-full text-lg font-medium hover:bg-gray-900 transition-colors">
-              Get Started
-            </button>
           </div>
-        </div>
-
-        {/* Horizontal Line */}
-        <div className="w-full h-px bg-black/20 mb-8"></div>
-
-        {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          {/* Logo */}
-          <a href="/" className="mb-6 md:mb-0">
-            <img src={assets.logo} alt="ProSensia" className="h-20 w-auto" />
-          </a>
 
           {/* Navigation */}
-          <nav className="flex flex-wrap justify-center gap-8 mb-6 md:mb-0">
-            <a href="/" className="text-black hover:text-gray-700 transition-colors font-medium">
+          <nav className="flex flex-wrap justify-center gap-6">
+            <NavLink to="/" className="text-black hover:text-white transition-colors">
               Home
-            </a>
-            <a href="/about" className="text-black hover:text-gray-700 transition-colors font-medium">
+            </NavLink>
+            <NavLink to="/About" className="text-black hover:text-white transition-colors">
               About Us
-            </a>
-            <a href="/services" className="text-black hover:text-gray-700 transition-colors font-medium">
+            </NavLink>
+            <NavLink to="/Services" className="text-black hover:text-white transition-colors">
               Services
-            </a>
-            <a href="/contact" className="text-black hover:text-gray-700 transition-colors font-medium">
+            </NavLink>
+            <NavLink to="/Contact" className="text-black hover:text-white transition-colors">
               Contact Us
-            </a>
+            </NavLink>
+            <NavLink to="/Blog" className="text-black hover:text-white transition-colors">
+              Blog
+            </NavLink>
           </nav>
 
           {/* Social Icons */}
@@ -55,33 +42,36 @@ export default function Footer() {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black hover:text-gray-700 transition-colors"
+              className="text-black hover:text-white transition-colors"
             >
-              <Facebook size={28} />
+              <Facebook size={24} />
               <span className="sr-only">Facebook</span>
             </a>
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black hover:text-gray-700 transition-colors"
+              className="text-black hover:text-white transition-colors"
             >
-              <Instagram size={28} />
+              <Instagram size={24} />
               <span className="sr-only">Instagram</span>
             </a>
             <a
               href="https://wa.me/your-number"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black hover:text-gray-700 transition-colors"
+              className="text-black hover:text-white transition-colors"
             >
-              <MessageCircle size={28} />
+              <MessageCircle size={24} />
               <span className="sr-only">WhatsApp</span>
             </a>
           </div>
         </div>
+
+        {/* Copyright */}
+        <div className="mt-6 text-center text-sm text-black">© {new Date().getFullYear()} All Rights Reserved</div>
       </div>
-    </div>
+    </footer>
   )
 }
 

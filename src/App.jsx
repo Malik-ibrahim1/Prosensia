@@ -7,6 +7,7 @@ import Contact from './assets/pages/Contact'
 import Services from './assets/pages/Services'
 import Navbar from './assets/components/Navbar'
 import Footer from './assets/components/Footer' // Import Footer
+import Events from './assets/pages/Events'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path='/Contact' element={<Contact />} />
         <Route path='/Services' element={<Services />} />
         <Route path='/Blog' element={<Blog />} />
+        <Route path='/Events' element={<Events />} />
       </Routes>
       <Footer /> {/* Add Footer here */}
     </div>

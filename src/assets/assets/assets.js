@@ -26,6 +26,7 @@ import ac_problems from './ac_problems.png'
 import centre from './centre.jpg'
 import tensed from './tensed.jpg'
 import ac_maintainece from './ac_maintainece.jpg'
+import editing from './editing.jpg'
 
 export const assets = {
     logo,
@@ -54,5 +55,6 @@ export const assets = {
     ac_problems,
     centre,
     tensed,
-    ac_maintainece
+    ac_maintainece,
+    editing
 }
